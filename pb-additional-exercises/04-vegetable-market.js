@@ -10,6 +10,6 @@ function calculateRevenue(priceVeg, priceFruit, totalKgVeg, totalKgFruit) {
   let totalRevenue = totalPriceFruit + totalPriceVeg;
   let revenueEuros = (totalRevenue / 1.94).toFixed(2);
   console.log(revenueEuros);
-};
+}
 
 calculateRevenue(0.194, 19.4, 10, 10)

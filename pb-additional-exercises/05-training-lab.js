@@ -5,6 +5,6 @@ function calculateWorkingSpaces(wInMetres, hInMetres) {
   let spacesHeight = Math.floor(wInCm / 120); //round down
   let totalSpace = (spacesHeight * spacesWidth) - 3;
   console.log(totalSpace);
-};
+}
 
 calculateWorkingSpaces(15, 8.9);
