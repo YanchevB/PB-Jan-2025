@@ -1,8 +1,8 @@
-function correctDoor() {
+function generateCorrectDoor() {
   const randomNumber = Math.random();
   let doorNumber;
 
-  if (randomNumber >= 0 && randomNumber < 1/3) {
+  if (randomNumber < 1/3) {
     doorNumber = 1;
   } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
     doorNumber = 2;
@@ -13,8 +13,8 @@ function correctDoor() {
   return doorNumber;
 }
 
-function pen4oGuess(number) {
-  const doorNumber = correctDoor();
+function guessTreasureDoor(number) {
+  const doorNumber = generateCorrectDoor();
 
   if (number > 3) {
     console.log('Invalid choice. Please select Door 1, 2, or 3.');
@@ -26,5 +26,5 @@ function pen4oGuess(number) {
   }
 }
 
-pen4oGuess(1);
+guessTreasureDoor(1);
 
