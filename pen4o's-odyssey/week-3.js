@@ -1,6 +1,5 @@
 function revealNextLocation(symbols) {
   let totalPower = 0;
-  let currentNumber = '';
   let swapCase = '';
 
   for (let i = 0; i < symbols.length; i++) {
@@ -15,16 +14,7 @@ function revealNextLocation(symbols) {
 
     //Adding numbers in the string logic
     if (!isNaN(char)) {
-      currentNumber += char;
-    } else if (currentNumber) {
-      totalPower += parseFloat(currentNumber);
-      currentNumber = '';
-    }
-
-    //If string finishes with a number, add it
-    if (currentNumber) {
-      totalPower += parseFloat(currentNumber);
-      currentNumber = '';
+      totalPower += Number(char)
     }
   }
 
